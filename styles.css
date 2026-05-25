@@ -1,0 +1,206 @@
+:root {
+  color-scheme: light;
+  --ink: #000000;
+  --muted: #333333;
+  --link: #0000ee;
+  --visited: #551a8b;
+  --rule: #808080;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+a:hover,
+a:focus {
+  color: #cc0000;
+}
+
+.site-shell {
+  width: min(960px, calc(100% - 24px));
+  margin: 12px auto 24px;
+}
+
+.masthead {
+  text-align: center;
+}
+
+.masthead::after,
+.tabs::after,
+main::after {
+  display: block;
+  height: 1px;
+  margin: 14px 0;
+  background: var(--rule);
+  content: "";
+}
+
+.kicker,
+.tagline,
+.email-card {
+  margin: 3px 0;
+}
+
+.kicker {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 8px 0 2px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  text-align: center;
+}
+
+h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+p {
+  margin-top: 0;
+}
+
+.tagline {
+  color: var(--muted);
+}
+
+.email-card {
+  font-size: 15px;
+}
+
+.tabs ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 36px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 0 0 22px;
+  text-align: left;
+}
+
+.tab {
+  font-weight: normal;
+}
+
+main {
+  min-height: 360px;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.notice {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 36px;
+  align-items: start;
+}
+
+.box {
+  padding: 0;
+}
+
+.compact-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.compact-list li + li {
+  margin-top: 4px;
+}
+
+.entry-list,
+.status-feed {
+  display: grid;
+  gap: 14px;
+}
+
+.entry,
+.status-post {
+  padding: 0;
+}
+
+.date {
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: calc(100% - 18px);
+    margin-top: 8px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  .tabs ul {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 320px;
+  }
+
+  .notice {
+    text-align: left;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
