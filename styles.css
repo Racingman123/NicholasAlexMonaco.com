@@ -159,6 +159,68 @@ main {
   padding: 0;
 }
 
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.social-tile {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 104px;
+  padding: 12px;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  background: #ffffff;
+}
+
+.social-tile:visited {
+  color: var(--ink);
+}
+
+.social-tile:hover,
+.social-tile:focus {
+  color: var(--ink);
+  border-color: #cc0000;
+  outline: 1px solid #cc0000;
+}
+
+.social-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid var(--rule);
+  background: #f7f7f7;
+}
+
+.social-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.social-tile strong,
+.social-tile span span {
+  display: block;
+}
+
+.social-tile strong {
+  margin-bottom: 3px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.social-tile span span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .date {
   margin-bottom: 2px;
   color: var(--muted);
@@ -202,5 +264,9 @@ footer {
   .two-column {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
   }
 }
